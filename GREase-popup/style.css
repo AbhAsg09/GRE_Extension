@@ -1,0 +1,103 @@
+body {
+    background-color: #1F1D2B !important;
+    height: 23rem;
+    width: 25rem;
+    font-weight: 600 !important;
+}
+
+.btn{
+    background-color: #E87B69 !important;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+}
+
+.savee {
+    font-size: 14px;
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+.savem {
+    font-size: 14px;
+    position: absolute;
+    top: 14px;
+    /* left: 28px; */
+}
+
+.saveh {
+    font-size: 14px;
+    position: absolute;
+    top: 14px;
+    /* left: 14px; */
+}
+
+.deleteButton {
+    font-size: 14px;
+    position: absolute;
+    top: 40px;
+    left: 14px;
+}
+
+.savedItems {
+    font-size: 14px;
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+}
+
+.next {
+    font-size: 14px;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+}
+
+.nextSaved {
+    font-size: 14px;
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+}
+
+.backSaved {
+    font-size: 14px;
+    position: absolute;
+    bottom: 14px;
+    left: 40%;
+}
+
+.exitButton {
+    font-size: 14px;
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+}
+
+.wordContent {
+    position: relative;
+    top: 50px;
+    padding: 14px;
+}
+
+.word {
+    color: #E87B69 ;
+    font-size: 3rem;
+}
+
+.pos {
+    color: #E87B69 ;
+    font-size: 1.75rem;
+    font-style: italic;
+}
+
+.desc {
+    color: #E87B69 ;
+    font-size: 1.75rem;
+}
+
+
+.btn:hover {
+    background-color: #dbe2ef;
+}

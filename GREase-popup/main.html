@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title>GRE words</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div>
+      <button type="button" class="btn btn-outline-info save" id="savee">Save Easy</button>
+      <button type="button" class="btn btn-outline-info save" id="savem">Save Medium</button>
+      <button type="button" class="btn btn-outline-info save" id="saveh">Save Hard</button>
+    </div>
+
+    <div class="wordContent">
+      <h1 class="word">Word</h1>
+      <h4 class="lead pos">pos</h4>
+      <p class="lead desc">description</p>
+    </div>
+
+    <div class="navigation">
+      <form action="./saved.html">
+        <button type="submit" class="btn btn-outline-info savedItems">Saved Words</button>  
+      </form>
+      
+      <button type="button" class="btn btn-outline-info next">Next</button>
+    </div>
+
+
+    <script src="main.js"></script>
+    <script src="data.js"></script>
+  </body>
+</html>

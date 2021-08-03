@@ -1,0 +1,17 @@
+{
+  "name": "GREase",
+  "version": "1.0.0",
+  "description": "Learn GRE words on the go",
+  "browser_action": {
+		"default_title": "GREase",
+		"default_popup": "main.html"
+	},
+  "background":{
+    "page": "background.html",
+    "persistent": false
+  },
+  "permissions": [
+    "storage"
+  ],
+  "manifest_version": 2
+}
