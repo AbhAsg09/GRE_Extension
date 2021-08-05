@@ -18,7 +18,7 @@ document.querySelector('button.next').addEventListener('click', function() {
     
 });
 
-document.querySelector('button.save').addEventListener('click', function () {
+document.querySelector('button.savee').addEventListener('click', function () {
     var word = document.querySelector('h1').innerHTML;
     var pos = document.querySelector('h4').innerHTML;
     var desc = document.querySelector('p').innerHTML;

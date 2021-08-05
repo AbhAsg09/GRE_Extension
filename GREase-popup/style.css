@@ -12,31 +12,17 @@ body {
     border: none;
 }
 
-.savee {
+.save{
     font-size: 14px;
     position: absolute;
     top: 14px;
     left: 14px;
 }
 
-.savem {
-    font-size: 14px;
-    position: absolute;
-    top: 14px;
-    /* left: 28px; */
-}
-
-.saveh {
-    font-size: 14px;
-    position: absolute;
-    top: 14px;
-    /* left: 14px; */
-}
-
 .deleteButton {
     font-size: 14px;
     position: absolute;
-    top: 40px;
+    top: 10px;
     left: 14px;
 }
 
