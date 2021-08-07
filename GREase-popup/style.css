@@ -1,8 +1,8 @@
 body {
-    background-color: #1F1D2B !important;
-    height: 23rem;
-    width: 25rem;
-    font-weight: 600 !important;
+    background-color: #30363D !important;
+    height: 19rem;
+    width: 20rem;
+    /* font-weight: 600 !important; */
 }
 
 .btn{
@@ -12,53 +12,177 @@ body {
     border: none;
 }
 
-.save{
-    font-size: 14px;
+.logo{
     position: absolute;
-    top: 14px;
-    left: 14px;
+    left: 40px;
+    top: 27px;
+    height: 25px;
+    width: 25px;
+}
+
+.save{display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px 14px;
+    
+    position: absolute;
+    width: 54px;
+    height: 25px;
+    right: 30px;
+    top: 255px;
+    
+    /* grada */
+    
+    background: linear-gradient(0deg, #A154F2, #A154F2);
+    box-shadow: 0px 8.62488px 32.3433px rgba(0, 0, 0, 0.1);
+    border-radius: 6.46866px;
+    font-size: 12px;
+}
+
+.highlighter{
+    position: absolute;
+    width: 112px;
+    height: 11px;
+    left: 131px;
+    top: 72px;
+
+    font-family: Poppins;
+    font-style: italic;
+    font-weight: 300;   
+    font-size: 10.0299px;
+    line-height: 15px;
+
+    color: #CBCFD4;
+    font-size: 12px;
+}
+
+.form-switch{
+    position: absolute;
+    width: 23px;
+    height: 11.5px;
+    /* left: 247px; */
+    right: 30px;
+    top: 69px;
 }
 
 .deleteButton {
-    font-size: 14px;
-    position: absolute;
-    top: 10px;
-    left: 14px;
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 21px;
+
+position: absolute;
+width: 75px;
+height: 25px;
+right: 30px;
+top: 258px;
+
+/* grada */
+
+background: linear-gradient(0deg, #A154F2, #A154F2);
+box-shadow: 0px 8.62488px 32.3433px rgba(0, 0, 0, 0.1);
+border-radius: 6.46866px;
+font-size: 12px;
 }
 
 .savedItems {
-    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 5px 14px;
+
     position: absolute;
-    bottom: 14px;
-    left: 14px;
+    width: 94px;
+    height: 25px;
+    right: 30px;
+    top: 27px;
+
+    /* grada */
+
+    background: linear-gradient(0deg, #A154F2, #A154F2);
+    box-shadow: 0px 8.62488px 32.3433px rgba(0, 0, 0, 0.1);
+    border-radius: 6.46866px;
+    font-size: 11px !important;
 }
 
 .next {
-    font-size: 14px;
-    position: absolute;
-    bottom: 14px;
-    right: 14px;
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 14px;
+
+position: absolute;
+width: 54px;
+height: 25px;
+left: 40px;
+top: 255px;
+
+/* grada */
+
+background: linear-gradient(0deg, #A154F2, #A154F2);
+box-shadow: 0px 8.62488px 32.3433px rgba(0, 0, 0, 0.1);
+border-radius: 6.46866px;
+font-size: 12px;
 }
 
 .nextSaved {
-    font-size: 14px;
-    position: absolute;
-    bottom: 14px;
-    right: 14px;
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 21px;
+
+position: absolute;
+width: 65px;
+height: 25px;
+left: 130px;
+top: 258px;
+
+/* grada */
+
+background: linear-gradient(0deg, #A154F2, #A154F2);
+box-shadow: 0px 8.62488px 32.3433px rgba(0, 0, 0, 0.1);
+border-radius: 6.46866px;
+font-size: 12px;
 }
 
 .backSaved {
-    font-size: 14px;
-    position: absolute;
-    bottom: 14px;
-    left: 40%;
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 21px;
+
+position: absolute;
+width: 68px;
+height: 25px;
+left: 40px;
+top: 258px;
+
+/* grada */
+
+background: linear-gradient(0deg, #A154F2, #A154F2);
+box-shadow: 0px 8.62488px 32.3433px rgba(0, 0, 0, 0.1);
+border-radius: 6.46866px;
+font-size: 12px;
 }
 
 .exitButton {
-    font-size: 14px;
-    position: absolute;
-    bottom: 14px;
-    left: 14px;
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 5px 21px;
+
+position: absolute;
+width: 60px;
+height: 25px;
+right: 30px;
+top: 27px;
+
+/* grada */
+
+background: linear-gradient(0deg, #A154F2, #A154F2);
+box-shadow: 0px 8.62488px 32.3433px rgba(0, 0, 0, 0.1);
+border-radius: 6.46866px;
+font-size: 12px;
 }
 
 .wordContent {
@@ -68,19 +192,51 @@ body {
 }
 
 .word {
-    color: #E87B69 ;
-    font-size: 3rem;
+    position: absolute;
+    width: 174px;
+    height: 50px;
+    left: 2.5rem;
+    top: 3rem;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 39px;
+
+    color: #826EFF;
 }
 
 .pos {
-    color: #E87B69 ;
-    font-size: 1.75rem;
-    font-style: italic;
+    position: absolute;
+width: 74px;
+height: 11px;
+left: 39px;
+top: 6rem;
+
+font-family: Poppins;
+font-style: italic;
+font-weight: normal;
+line-height: 15px;
+
+color: rgba(203, 207, 212, 0.75);
+font-size: 15px;
 }
 
 .desc {
-    color: #E87B69 ;
-    font-size: 1.75rem;
+    position: absolute;
+width: 230px;
+height: 33px;
+left: 40px;
+top: 8rem;
+
+font-family: Poppins;
+font-style: normal;
+font-weight: bold;
+font-size: 18px;
+line-height: 18px;
+
+color: #826EFF;
 }
 
 

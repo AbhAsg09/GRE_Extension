@@ -8,18 +8,23 @@
   <body>
     
     <div>
-      <button type="button" class="btn btn-outline-info save" id="savee">Save</button>
+      <img src="/img/Logo.png" alt="" class="logo">
+      <button type="button" class="btn btn-outline-info save" id="save">Save</button>
+      <h5 class="highlighter">Highlight saved words</h5>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" data-onstyle="dark">
+      </div>
     </div>
 
     <div class="wordContent">
       <h1 class="word">Word</h1>
       <h4 class="lead pos">pos</h4>
-      <p class="lead desc">description</p>
+      <p class="lead desc"></p>
     </div>
 
     <div class="navigation">
       <form action="./saved.html">
-        <button type="submit" class="btn btn-outline-info savedItems">Saved Words</button>  
+        <button type="submit" class="btn btn-outline-info savedItems" >Saved Words</button>  
       </form>
       
       <button type="button" class="btn btn-outline-info next">Next</button>
