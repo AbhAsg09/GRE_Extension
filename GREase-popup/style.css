@@ -243,3 +243,7 @@ color: #826EFF;
 .btn:hover {
     background-color: #dbe2ef;
 }
+
+.addHighlight {
+    background-color: yellow;
+  }

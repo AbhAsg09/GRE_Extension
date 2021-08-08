@@ -18,7 +18,7 @@ document.querySelector('button.next').addEventListener('click', function() {
     
 });
 
-document.querySelector('button.savee').addEventListener('click', function () {
+document.querySelector('button.save').addEventListener('click', function () {
     var word = document.querySelector('h1').innerHTML;
     var pos = document.querySelector('h4').innerHTML;
     var desc = document.querySelector('p').innerHTML;
@@ -57,3 +57,14 @@ document.querySelector('button.savedItems').addEventListener('click', function (
     })
 });
 */
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('button.savedItems').addEventListener('click', onclick, false)
+
+        function onclick () {
+            var savedWords = localStorage.getItem('GRE-words');
+            chrome.tabs.query({currentWindow: true, active: true}, function (tabs) {
+                chrome.tabs.sendMessage(tabs[0].id, savedWords)
+            })
+        }
+}, false)

@@ -16,7 +16,7 @@ function nextItem() {
             index = JSON.parse(index);
         }
     
-        index = index + 1;
+        index = index + 1; 
         size = swordList.length;
     
         if(index >= size) {
