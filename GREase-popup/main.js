@@ -62,9 +62,15 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('button.savedItems').addEventListener('click', onclick, false)
 
         function onclick () {
-            var savedWords = localStorage.getItem('GRE-words');
-            chrome.tabs.query({currentWindow: true, active: true}, function (tabs) {
-                chrome.tabs.sendMessage(tabs[0].id, savedWords)
-            })
+            var savedWordsStr = localStorage.getItem('GRE-words');
+            if(savedWordsStr != null) {
+                var savedWords = JSON.parse(savedWordsStr);
+                var i;
+                chrome.tabs.query({currentWindow: true, active: true}, function (tabs) {
+                    for(i=0; i<savedWords.length; i++) {
+                        chrome.tabs.sendMessage(tabs[0].id, savedWords[i])
+                    }
+                })
+            }
         }
 }, false)
