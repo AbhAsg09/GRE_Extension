@@ -18,32 +18,16 @@ document.querySelector('button.next').addEventListener('click', function() {
     
 });
 
-document.querySelector('button.savee').addEventListener('click', function () {
+document.querySelector('.saveButton').addEventListener('click', function (event) {
+    event.preventDefault();
     var word = document.querySelector('h1').innerHTML;
     var pos = document.querySelector('h4').innerHTML;
     var desc = document.querySelector('p').innerHTML;
-    var wordObj = {word,pos,desc};
-    var savedWordsStr = localStorage.getItem('GRE-words');
-    if(savedWordsStr == null) {
-        var wordList = [wordObj];
-        var wordListStr = JSON.stringify(wordList);
-        localStorage.setItem('GRE-words', wordListStr);
-    }
-    else {
-        var savedWords = JSON.parse(savedWordsStr);
-        var i;
-        for(i=0; i<savedWords.length; i++) {
-            if(savedWords[i].word == wordObj.word) {
-                break;
-            }
-        }
-        if (i == savedWords.length) {
-            savedWords.push(wordObj);
-            savedWordsStr = JSON.stringify(savedWords);
-            localStorage.setItem('GRE-words', savedWordsStr);
-        }
-        
-    }
+    
+    localStorage.setItem('word-word', word);
+    localStorage.setItem('word-pos', pos);
+    localStorage.setItem('word-desc', desc);
+    document.querySelector( ".gotWordData" ).click(); 
 });
 
 /*

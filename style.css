@@ -243,3 +243,9 @@ color: #826EFF;
 .btn:hover {
     background-color: #dbe2ef;
 }
+
+a:link, a:visited,  a:hover, a:active
+{
+    color: #ffffff;
+    text-decoration: none;
+}

@@ -9,29 +9,25 @@
     
     <div>
       <img src="/img/Logo.png" alt="" class="logo">
-      <button type="button" class="btn btn-outline-info save saveButton" id="save">Save</button>
-      <h5 class="highlighter">Highlight saved words</h5>
-      <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" data-onstyle="dark">
-      </div>
+      <button type="button" class="btn btn-outline-info save" id="save">Save</button>
     </div>
-    <a href="comment.html" class="gotWordData"></a>
+
     <div class="wordContent">
-      <h1 class="word">Word</h1>
-      <h4 class="lead pos">pos</h4>
-      <p class="lead desc"></p>
+      <h1 class="word commentWord">Word</h1>
+      <h4 class="lead pos commentPos">pos</h4>
+      <p class="lead desc commentDesc"></p>
+      <input type="text"  class="comment" name="" placeholder="comment" id="textt">
     </div>
 
     <div class="navigation">
       <form action="./saved.html">
         <button type="submit" class="btn btn-outline-info savedItems" >Saved Words</button>  
       </form>
-      
-      <button type="button" class="btn btn-outline-info next">Next</button>
+      <a href="main.html" class="lessgoMain"></a>
+      <button type="button" class="btn btn-outline-info next cancel"><a href="main.html">Cancel</a></button>
     </div>
 
-    <script src="main.js"></script>
+    <script src="comment.js"></script>
     <script src="data.js"></script>
-    
     </body>
 </html>

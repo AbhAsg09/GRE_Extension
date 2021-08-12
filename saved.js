@@ -5,7 +5,8 @@ function nextItem() {
     if(swordList.length == 0) {
         document.querySelector('h1').innerHTML='OOPS!';
         document.querySelector('h4').innerHTML='(exclamation)';
-        document.querySelector('p').innerHTML='Nothing in here boss!';
+        document.querySelector('.description').innerHTML='Nothing in here boss!';
+        
     }
     else {
         index = localStorage.getItem('GRE-index');
@@ -25,7 +26,12 @@ function nextItem() {
     
         document.querySelector('h1').innerHTML=swordList[index].word;
         document.querySelector('h4').innerHTML=swordList[index].pos;
-        document.querySelector('p').innerHTML=swordList[index].desc;
+        document.querySelector('.description').innerHTML=swordList[index].desc;
+        if (swordList[index].comment) {
+            document.querySelector('.comment').innerHTML=swordList[index].comment;
+        } else {
+            document.querySelector('.comment').innerHTML="No comments added";
+        }
         localStorage.setItem('GRE-index', index);
     }
     
@@ -37,7 +43,7 @@ function prevItem() {
     if (swordList.length == 0) {
         document.querySelector('h1').innerHTML='OOPS!';
         document.querySelector('h4').innerHTML='(exclamation)';
-        document.querySelector('p').innerHTML='Nothing in here boss!';
+        document.querySelector('.description').innerHTML='Nothing in here boss!';
     }
     else {
         index = localStorage.getItem('GRE-index');
@@ -56,7 +62,8 @@ function prevItem() {
 
         document.querySelector('h1').innerHTML=swordList[index].word;
         document.querySelector('h4').innerHTML=swordList[index].pos;
-        document.querySelector('p').innerHTML=swordList[index].desc;
+        document.querySelector('.description').innerHTML=swordList[index].desc;
+        document.querySelector('.comment').innerHTML=swordList[index].comment;
         localStorage.setItem('GRE-index', index);
     }
     
@@ -78,7 +85,7 @@ document.querySelector('button.deleteButton').addEventListener('click', function
     if(swordList.length == 0) {
         document.querySelector('h1').innerHTML='OOPS!';
         document.querySelector('h4').innerHTML='(exclamation)';
-        document.querySelector('p').innerHTML='Nothing in here boss!';
+        document.querySelector('.description').innerHTML='Nothing in here boss!';
     }
     else {
         index = localStorage.getItem('GRE-index');
