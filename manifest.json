@@ -16,7 +16,9 @@
         "persistent": false
     },
     "permissions": [
-        "storage"
+        "storage",
+        "activeTab",
+        "declarativeContent"
     ],
     "manifest_version": 2
 }
