@@ -2,6 +2,7 @@
 function nextItem() {
     swordListStr = localStorage.getItem('GRE-words');
     swordList = JSON.parse(swordListStr);
+    // Creating a list of none exists from prior
     if(!swordList || swordList.length==0) {
         document.querySelector('.gre-word').innerHTML='OOPS!';
         document.querySelector('.gre-pos').innerHTML='(exclamation)';
