@@ -1,5 +1,4 @@
-
-await chrome.runtime.sendMessage({name: "fetchWord"}, (response) => {
+chrome.runtime.sendMessage({name: "fetchWord"}, (response) => {
     
     document.querySelector('.gre-word').innerHTML=response.word;
     document.querySelector('.gre-pos').innerHTML=response.pos;
