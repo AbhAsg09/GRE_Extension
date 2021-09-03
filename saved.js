@@ -3,9 +3,9 @@ function nextItem() {
     swordListStr = localStorage.getItem('GRE-words');
     swordList = JSON.parse(swordListStr);
     if(swordList.length == 0) {
-        document.querySelector('h1').innerHTML='OOPS!';
-        document.querySelector('h4').innerHTML='(exclamation)';
-        document.querySelector('.description').innerHTML='Nothing in here boss!';
+        document.querySelector('.gre-word').innerHTML='OOPS!';
+        document.querySelector('.gre-pos').innerHTML='(exclamation)';
+        document.querySelector('.gre-desc').innerHTML='Nothing in here boss!';
         
     }
     else {
@@ -24,9 +24,9 @@ function nextItem() {
             index = index % size;
         }
     
-        document.querySelector('h1').innerHTML=swordList[index].word;
-        document.querySelector('h4').innerHTML=swordList[index].pos;
-        document.querySelector('.description').innerHTML=swordList[index].desc;
+        document.querySelector('.gre-word').innerHTML=swordList[index].word;
+        document.querySelector('.gre-pos').innerHTML=swordList[index].pos;
+        document.querySelector('.gre-desc').innerHTML=swordList[index].desc;
         if (swordList[index].comment) {
             document.querySelector('.comment').innerHTML=swordList[index].comment;
         } else {
@@ -41,9 +41,9 @@ function prevItem() {
     swordListStr = localStorage.getItem('GRE-words');
     swordList = JSON.parse(swordListStr);
     if (swordList.length == 0) {
-        document.querySelector('h1').innerHTML='OOPS!';
-        document.querySelector('h4').innerHTML='(exclamation)';
-        document.querySelector('.description').innerHTML='Nothing in here boss!';
+        document.querySelector('.gre-word').innerHTML='OOPS!';
+        document.querySelector('.gre-pos').innerHTML='(exclamation)';
+        document.querySelector('.gre-desc').innerHTML='Nothing in here boss!';
     }
     else {
         index = localStorage.getItem('GRE-index');
@@ -60,9 +60,9 @@ function prevItem() {
             index = size - 1;
         }
 
-        document.querySelector('h1').innerHTML=swordList[index].word;
-        document.querySelector('h4').innerHTML=swordList[index].pos;
-        document.querySelector('.description').innerHTML=swordList[index].desc;
+        document.querySelector('.gre-word').innerHTML=swordList[index].word;
+        document.querySelector('.gre-pos').innerHTML=swordList[index].pos;
+        document.querySelector('.gre-desc').innerHTML=swordList[index].desc;
         document.querySelector('.comment').innerHTML=swordList[index].comment;
         localStorage.setItem('GRE-index', index);
     }
@@ -83,9 +83,9 @@ document.querySelector('button.deleteButton').addEventListener('click', function
     swordListStr = localStorage.getItem('GRE-words');
     swordList = JSON.parse(swordListStr);
     if(swordList.length == 0) {
-        document.querySelector('h1').innerHTML='OOPS!';
-        document.querySelector('h4').innerHTML='(exclamation)';
-        document.querySelector('.description').innerHTML='Nothing in here boss!';
+        document.querySelector('.gre-word').innerHTML='OOPS!';
+        document.querySelector('.gre-pos').innerHTML='(exclamation)';
+        document.querySelector('.gre-desc').innerHTML='Nothing in here boss!';
     }
     else {
         index = localStorage.getItem('GRE-index');
