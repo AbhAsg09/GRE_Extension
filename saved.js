@@ -2,13 +2,14 @@
 function nextItem() {
     swordListStr = localStorage.getItem('GRE-words');
     swordList = JSON.parse(swordListStr);
-    if(swordList.length == 0) {
+    if(!swordList || swordList.length==0) {
         document.querySelector('.gre-word').innerHTML='OOPS!';
         document.querySelector('.gre-pos').innerHTML='(exclamation)';
         document.querySelector('.gre-desc').innerHTML='Nothing in here boss!';
-        
-    }
-    else {
+        chrome.storage.local.set({'GRE-words': {}}, function() {
+            console.log("Saved word list created!!");
+        });
+    } else {
         index = localStorage.getItem('GRE-index');
         if(index == null || index < 0) {
             index = -1;

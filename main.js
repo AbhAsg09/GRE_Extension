@@ -1,5 +1,5 @@
 
-chrome.runtime.sendMessage({name: "fetchWord"}, (response) => {
+await chrome.runtime.sendMessage({name: "fetchWord"}, (response) => {
     
     document.querySelector('.gre-word').innerHTML=response.word;
     document.querySelector('.gre-pos').innerHTML=response.pos;
@@ -7,8 +7,8 @@ chrome.runtime.sendMessage({name: "fetchWord"}, (response) => {
   
 });
 
-document.querySelector('button.next').addEventListener('click', function() {
-    chrome.runtime.sendMessage({name: "fetchWord"}, (response) => {
+document.querySelector('button.next').addEventListener('click', async function() {
+    await chrome.runtime.sendMessage({name: "fetchWord"}, (response) => {
     
         document.querySelector('.gre-word').innerHTML=response.word;
         document.querySelector('.gre-pos').innerHTML=response.pos;
