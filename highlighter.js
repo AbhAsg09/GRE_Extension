@@ -9,7 +9,7 @@ function replaceText(element) {
   if (element.hasChildNodes()) {
     element.childNodes.forEach(replaceText)
   } else if (element.nodeType === Text.TEXT_NODE) {
-    const words = new Set();a
+    const words = new Set();
     var string = element.textContent;
     string.trim();
     string.replace( /\n/g, " " ).split( " " )
