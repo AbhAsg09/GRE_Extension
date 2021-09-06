@@ -13,12 +13,10 @@ document.querySelector('#save').addEventListener('click', function () {
     var comment = document.getElementById('textt').value;
     var wordObj = {word,pos,desc,comment};
     var savedWordsStr = localStorage.getItem('GRE-words');
-    chrome.storage.local.set({'GRE-words':savedWordsStr});
     if(savedWordsStr == null) {
         var wordList = [wordObj];
         var wordListStr = JSON.stringify(wordList);
         localStorage.setItem('GRE-words', wordListStr);
-        chrome.storage.local.set({'GRE-words':wordListStr});
     }
     else {
         var savedWords = JSON.parse(savedWordsStr);
@@ -32,7 +30,6 @@ document.querySelector('#save').addEventListener('click', function () {
             savedWords.push(wordObj);
             savedWordsStr = JSON.stringify(savedWords);
             localStorage.setItem('GRE-words', savedWordsStr);
-            chrome.storage.local.set({'GRE-words':savedWordsStr});
         }
         
     }

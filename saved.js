@@ -2,15 +2,12 @@
 function nextItem() {
     swordListStr = localStorage.getItem('GRE-words');
     swordList = JSON.parse(swordListStr);
-    chrome.storage.local.set({'GRE-words':swordListStr});
     // Creating a list of none exists from prior
     if(!swordList || swordList.length==0) {
         document.querySelector('.gre-word').innerHTML='OOPS!';
         document.querySelector('.gre-pos').innerHTML='(exclamation)';
         document.querySelector('.gre-desc').innerHTML='Nothing in here boss!';
-        chrome.storage.local.set({'GRE-words': {}}, function() {
-            console.log("Saved word list created!!");
-        });
+        document.querySelector('.comment').innerHTML= 'Void';
     } else {
         index = localStorage.getItem('GRE-index');
         if(index == null || index < 0) {
@@ -44,10 +41,11 @@ function prevItem() {
     swordListStr = localStorage.getItem('GRE-words');
     chrome.storage.local.set({'GRE-words':swordListStr});
     swordList = JSON.parse(swordListStr);
-    if (swordList.length == 0) {
+    if (!swordList || swordList==null || swordList.length == 0) {
         document.querySelector('.gre-word').innerHTML='OOPS!';
         document.querySelector('.gre-pos').innerHTML='(exclamation)';
         document.querySelector('.gre-desc').innerHTML='Nothing in here boss!';
+        document.querySelector('.comment').innerHTML= 'Void';
     }
     else {
         index = localStorage.getItem('GRE-index');
@@ -87,10 +85,11 @@ document.querySelector('button.deleteButton').addEventListener('click', function
     swordListStr = localStorage.getItem('GRE-words');
     chrome.storage.local.set({'GRE-words':swordListStr});
     swordList = JSON.parse(swordListStr);
-    if(swordList.length == 0) {
+    if(!swordList || swordList==null || swordList.length == 0) {
         document.querySelector('.gre-word').innerHTML='OOPS!';
         document.querySelector('.gre-pos').innerHTML='(exclamation)';
         document.querySelector('.gre-desc').innerHTML='Nothing in here boss!';
+        document.querySelector('.comment').innerHTML= 'Void';
     }
     else {
         index = localStorage.getItem('GRE-index');
