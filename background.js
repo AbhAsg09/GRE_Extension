@@ -4699,13 +4699,4 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
         });
   
     }
-
-    if(msg.name == "saveWord"){
-        
-        chrome.storage.local.set({'GREWords': JSON.stringify(msg.word)}, function() {
-            console.log('Value is set to ');
-        }); 
-        response({status: true});
-    }
-
 });

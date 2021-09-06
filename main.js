@@ -1,7 +1,5 @@
 let lastWord = localStorage.getItem('lastWord');
-console.log(lastWord);
 lastWord = JSON.parse(lastWord);
-console.log(lastWord);
 if (lastWord) {
     document.querySelector('.gre-word').innerHTML=lastWord[0].word;
     document.querySelector('.gre-pos').innerHTML=lastWord[0].pos;
