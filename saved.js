@@ -2,13 +2,16 @@
 function nextItem() {
     swordListStr = localStorage.getItem('GRE-words');
     swordList = JSON.parse(swordListStr);
-    if(swordList.length == 0) {
+    chrome.storage.local.set({'GRE-words':swordListStr});
+    // Creating a list of none exists from prior
+    if(!swordList || swordList.length==0) {
         document.querySelector('.gre-word').innerHTML='OOPS!';
         document.querySelector('.gre-pos').innerHTML='(exclamation)';
         document.querySelector('.gre-desc').innerHTML='Nothing in here boss!';
-        
-    }
-    else {
+        chrome.storage.local.set({'GRE-words': {}}, function() {
+            console.log("Saved word list created!!");
+        });
+    } else {
         index = localStorage.getItem('GRE-index');
         if(index == null || index < 0) {
             index = -1;
@@ -39,6 +42,7 @@ function nextItem() {
 
 function prevItem() {
     swordListStr = localStorage.getItem('GRE-words');
+    chrome.storage.local.set({'GRE-words':swordListStr});
     swordList = JSON.parse(swordListStr);
     if (swordList.length == 0) {
         document.querySelector('.gre-word').innerHTML='OOPS!';
@@ -81,6 +85,7 @@ document.querySelector('button.backSaved').addEventListener('click', function ()
 
 document.querySelector('button.deleteButton').addEventListener('click', function () {
     swordListStr = localStorage.getItem('GRE-words');
+    chrome.storage.local.set({'GRE-words':swordListStr});
     swordList = JSON.parse(swordListStr);
     if(swordList.length == 0) {
         document.querySelector('.gre-word').innerHTML='OOPS!';
@@ -94,6 +99,7 @@ document.querySelector('button.deleteButton').addEventListener('click', function
         swordList.splice(index, 1);
         swordListStr = JSON.stringify(swordList);
         localStorage.setItem('GRE-words', swordListStr);
+        chrome.storage.local.set({'GRE-words':swordListStr});
         index = index - 1;
         size = swordList.length;
 
