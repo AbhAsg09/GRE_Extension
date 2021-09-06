@@ -4709,23 +4709,3 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
     }
 
 });
-
-chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-    if (changeInfo.status === 'complete' && /^http/.test(tab.url)) {
-        chrome.scripting.insertCSS({
-            target: { tabId: tabId },
-            files: ["./highlighter.css"]
-        })
-            .then(() => {
-                console.log("Injected CSSS")
-            })
-        chrome.scripting.executeScript({
-            target: { tabId: tabId },
-            files: ["./highlighter.js"]
-        })
-            .then(() => {
-                console.log("INJECTED THE FOREGROUND SCRIPT.");
-            })
-            .catch(err => console.log(err));
-    }
-});
