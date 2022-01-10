@@ -1,27 +1,19 @@
 {
-    "name": "GREase",
-    "version": "1.0.0",
-    "description": "Learn GRE words on the go",
-    "manifest_version": 3,
-    "icons": {
-        "16": "Logo1.png"
-    },
-    "background": {
-        "service_worker": "background.js"
-    },
-    "host_permissions": [
-        "*://*/*"
-    ],
-    "action": {
-        "default_popup": "main.html",
-        "default_icon": {
-            "16": "Logo1.png"
-        }
-    },
-    "permissions": [
-        "storage",
-        "activeTab",
-        "declarativeContent",
-        "scripting"
-    ]
+  "name": "GREase",
+  "version": "1.0.0",
+  "description": "Learn GRE words on the go!",
+  "manifest_version": 3,
+  "icons": {
+    "16": "Logo128.png",
+    "48": "Logo128.png",
+    "128": "Logo128.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "main.html",
+    "default_icon": "Logo128.png"
+  },
+  "permissions": ["storage"]
 }

@@ -8,8 +8,72 @@
 </head>
 
 <body>
+    <div class="container main-cont">
 
-    <div>
+        <div class="row head justify-content-between">
+            <div class="col-3">
+                <img src="logo.png" alt="" class="logo">
+            </div>
+            <div class="col-5 savedwordsform">
+                <form action="./saved.html">
+                    <button type="submit" class="btn btn-outline-info savedItems">Saved Words</button>
+                </form>
+                
+            </div>   
+            
+        </div>
+
+        
+
+        <div class="row wordrow justify-content-between">
+            <h1 class="gre-word word col ">Word</h1>
+            <i class="bi bi-bookmark saveButton saveicon col"></i>
+        </div>
+        <div class="row">
+            <h4 class="lead gre-pos pos">pos</h4>
+        </div>
+        <div class="row">
+            <p class="lead gre-desc desc"></p>
+        </div>
+        <div class="row inputrow">
+            <input type="text" class="comment" name="" placeholder="Add Comment" id="textt">
+        </div>
+        <div class="row justify-content-between cmtbottom">
+            <a href="main.html" class="lessgoMain"></a>
+            <div class="col cancelform">
+                <form action="./main.html">
+                    <button type="submit" class="btn btn-outline-info cancel">Cancel</button>
+                </form>
+                
+            </div>  
+            
+            <!-- <a href="main.html"><button type="button" class="btn btn-outline-info cancel">Cancel</button></a> -->
+            <button type="button" class="btn btn-outline-info save" id="save">Save</button>
+        </div>
+        
+        <!-- <div class="row">
+            <button type="button" class="btn btn-outline-info save saveButton" id="save">Save</button>
+            
+        </div> -->
+
+        <!-- <div class="row justify-content-between bottom-row">
+            <button type="button" class="btn btn-outline-info highlighter ">
+                Search Google
+            </button>
+            <button type="button" class="btn btn-outline-info next">Next</button>
+        </div> -->
+        <div class="row">
+            <a href="comment.html" class="gotWordData"></a>
+        </div>
+        
+        <div class="row fter">
+            <p class="madewith" >Made with ❤ by VinnovateIT</p>
+        </div>
+    </div>
+
+
+
+    <!-- <div>
         <img src="Logo1.png" alt="" class="logo">
         <button type="button" class="btn btn-outline-info save" id="save">Save</button>
     </div>
@@ -27,7 +91,7 @@
         </form>
         <a href="main.html" class="lessgoMain"></a>
         <button type="button" class="btn btn-outline-info next cancel"><a href="main.html">Cancel</a></button>
-    </div>
+    </div> -->
 
     <script src="comment.js"></script>
 </body>
