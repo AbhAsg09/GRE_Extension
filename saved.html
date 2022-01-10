@@ -9,7 +9,60 @@
 
 <body>
 
-    <div>
+    <div class="container main-cont">
+
+        <div class="row head justify-content-between">
+            <div class="col-3">
+                <img src="logo.png" alt="" class="logo">
+            </div>
+            <div class="col-5 exitform">
+                <form action="./main.html">
+                    <button type="submit" class="btn btn-outline-info exitButton">Exit</button>
+                </form>
+                
+            </div>   
+            
+        </div>
+
+        
+
+        <div class="row wordrow justify-content-between">
+            <h1 class="gre-word word col ">Word</h1>
+            <i class="bi bi-bookmark saveButton saveicon col"></i>
+        </div>
+        <div class="row">
+            <h4 class="lead gre-pos pos">pos</h4>
+        </div>
+        <div class="row">
+            <p class="lead gre-desc desc"></p>
+        </div>
+        <div class="row">
+            <p class="lead comment" id="cmnt">No comments added</p>
+        </div>
+        <!-- <div class="row">
+            <button type="button" class="btn btn-outline-info save saveButton" id="save">Save</button>
+            
+        </div> -->
+
+        <div class="row justify-content-between bottom-row savedbottom">
+            <button type="button" class="btn btn-outline-info deleteButton">Delete</button>
+            <button type="button" class="btn btn-outline-info backSaved">Back</button>
+            <button type="button" class="btn btn-outline-info nextSaved">Next</button>
+        </div>
+        <div class="row">
+            <a href="comment.html" class="gotWordData"></a>
+        </div>
+        
+        <div class="row fter">
+            <p class="madewith" >Made with ❤ by VinnovateIT</p>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- <div>
         <img src="Logo1.png" alt="" class="logo">
         <button type="button" class="btn btn-outline-info deleteButton">Delete</button>
     </div>
@@ -28,7 +81,7 @@
 
         <button type="button" class="btn btn-outline-info backSaved">Back</button>
         <button type="button" class="btn btn-outline-info nextSaved">Next</button>
-    </div>
+    </div> -->
 
 
     <script src="saved.js"></script>
